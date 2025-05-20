@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cases - Access to Justice</title>
+    <link rel="stylesheet" href="assets/css/button-styles.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .case-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .case-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .case-title {
+            color: #3a86ff;
+            margin-bottom: 10px;
+        }
+        .case-desc {
+            margin-bottom: 15px;
+        }
+        .case-btn {
+            background-color: #4cc9f0;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: none;
+        }
+        .chatbot-header {
+            background: #3a86ff;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .chatbot-body {
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        .chatbot-input {
+            display: flex;
+            padding: 10px;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .chatbot-input button {
+            margin-left: 5px;
+            background: #3a86ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <b>Access to Justice</b>
+                        </a>
+                        <ul class="nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#cases">Available Cases</a></li>
+                            <li><a href="#chatbot">Chat with Assistant</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section main-banner" id="cases" data-section="section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="case-container">
+                        <h2>Available Legal Assistance Options</h2>
+                        
+                        <div class="case-card">
+                            <h3 class="case-title">Unfair Work Dismissal</h3>
+                            <p class="case-desc">If you believe you've been unfairly dismissed from your job, we can connect you with legal experts who can review your case and advise on potential wrongful termination claims.</p>
+                            <button class="case-btn" onclick="openChatbot('Unfair Work Dismissal')">Request Assistance</button>
+                        </div>
+                        
+                        <div class="case-card">
+                            <h3 class="case-title">Sexual Assault/Harassment</h3>
+                            <p class="case-desc">Our network includes specialized lawyers who can provide confidential support and guidance for survivors of sexual assault or harassment, both in workplace and other settings.</p>
+                            <button class="case-btn" onclick="openChatbot('Sexual Assault/Harassment')">Request Assistance</button>
+                        </div>
+                        
+                        <div class="case-card">
+                            <h3 class="case-title">Landlord-Tenant Dispute</h3>
+                            <p class="case-desc">Facing issues with your landlord? Whether it's unfair eviction, security deposit disputes, or maintenance problems, we can connect you with housing law specialists.</p>
+                            <button class="case-btn" onclick="openChatbot('Landlord-Tenant Dispute')">Request Assistance</button>
+                        </div>
+                        
+                        <div class="case-card">
+                            <h3 class="case-title">Discrimination at Workplace</h3>
+                            <p class="case-desc">If you've experienced discrimination based on gender, race, religion, disability, or other protected characteristics, our lawyers can help you understand your rights.</p>
+                            <button class="case-btn" onclick="openChatbot('Discrimination at Workplace')">Request Assistance</button>
+                        </div>
+                        
+                        <div class="case-card">
+                            <h3 class="case-title">Wage Theft</h3>
+                            <p class="case-desc">Not being paid overtime, minimum wage violations, or unpaid wages? Our legal network can help you recover what you're owed.</p>
+                            <button class="case-btn" onclick="openChatbot('Wage Theft')">Request Assistance</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <h3>Legal Assistance Chat</h3>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function openChatbot(caseType) {
+            const chatbot = document.getElementById('chatbot');
+            const chatbotBody = document.getElementById('chatbot-body');
+            
+            chatbot.style.display = 'block';
+            chatbotBody.innerHTML = `
+                <p><strong>System:</strong> You've selected assistance with <strong>${caseType}</strong>.</p>
+                <p><strong>System:</strong> Please describe your situation in detail. A legal professional will review your case and contact you shortly.</p>
+            `;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatbot-input');
+            const message = input.value.trim();
+            const chatbotBody = document.getElementById('chatbot-body');
+            
+            if (message) {
+                chatbotBody.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+                input.value = '';
+                
+                // Simulate response
+                setTimeout(() => {
+                    chatbotBody.innerHTML += `<p><strong>System:</strong> Thank you for your message. Your details have been recorded and a legal professional will contact you within 24 hours.</p>`;
+                    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                }, 1000);
+                
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

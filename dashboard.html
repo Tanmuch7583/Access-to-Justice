@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lawyer Dashboard | Access to Justice</title>
+
+  <!-- Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <!-- Custom Styling -->
+  <style>
+    .dashboard-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .case-card {
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    .case-card:hover {
+      transform: scale(1.02);
+    }
+    .card-body p {
+      font-size: 0.95rem;
+    }
+    .student-tag {
+      display: inline-block;
+      background-color: #e9ecef;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+      margin-top: 4px;
+      color: #333;
+    }
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sub Header -->
+<div class="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-sm-8"></div>
+      <div class="col-lg-4 col-sm-4">
+        <div class="right-icons">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header Area -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <a href="index.html" class="logo"><b>Access to Justice</b></a>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="cases.html">Cases</a></li>
+          </ul>
+          <a class='menu-trigger'><span>Menu</span></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<section class="section">
+  <div class="container">
+    <h3 class="dashboard-title">Available Cases</h3>
+
+    <div class="row">
+      <!-- Case Card 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="card case-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Unfair Workplace Dismissal</h5>
+            <p><strong>Client:</strong> Jane Doe</p>
+            <p><strong>Description:</strong> Fired without cause or severance after 5 years of service.</p>
+            <p><strong>Status:</strong> Open</p>
+            <p><strong>Suggested Students:</strong></p>
+            <div>
+              <span class="student-tag">Joseph Mwangi (Employment Law)</span>
+              <span class="student-tag">Lilian Wanjiru (Civil Procedure)</span>
+            </div>
+            <div class="action-buttons mt-3">
+              <button class="btn btn-primary btn-sm">Assign Student</button>
+              <button class="btn btn-info btn-sm">Collaborate</button>
+              <a href="case-detail.html?case=unfair-dismissal" class="btn btn-secondary btn-sm">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Card 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="card case-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Sexual Assault Case</h5>
+            <p><strong>Client:</strong> Anonymous</p>
+            <p><strong>Description:</strong> Alleged assault during employment; employer failed to act on complaint.</p>
+            <p><strong>Status:</strong> Urgent</p>
+            <p><strong>Suggested Students:</strong></p>
+            <div>
+              <span class="student-tag">Faith Okoth (Human Rights)</span>
+              <span class="student-tag">Kevin Otieno (Criminal Procedure)</span>
+            </div>
+            <div class="action-buttons mt-3">
+              <button class="btn btn-primary btn-sm">Assign Student</button>
+              <button class="btn btn-info btn-sm">Collaborate</button>
+              <a href="case-detail.html?case=sexual-assault" class="btn btn-secondary btn-sm">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Card 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="card case-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Landlord-Tenant Dispute</h5>
+            <p><strong>Client:</strong> John Smith</p>
+            <p><strong>Description:</strong> Refusal to return security deposit after lease ended.</p>
+            <p><strong>Status:</strong> In Progress</p>
+            <p><strong>Suggested Students:</strong></p>
+            <div>
+              <span class="student-tag">Caroline Wambua (Property Law)</span>
+              <span class="student-tag">Brian Nyaga (Civil Procedure)</span>
+            </div>
+            <div class="action-buttons mt-3">
+              <button class="btn btn-primary btn-sm">Assign Student</button>
+              <button class="btn btn-info btn-sm">Collaborate</button>
+              <a href="case-detail.html?case=landlord-dispute" class="btn btn-secondary btn-sm">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Card 4 -->
+      <div class="col-md-6 mb-4">
+        <div class="card case-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Child Custody Issue</h5>
+            <p><strong>Client:</strong> Maria Lopez</p>
+            <p><strong>Description:</strong> Seeking sole custody due to domestic violence history.</p>
+            <p><strong>Status:</strong> Reviewing</p>
+            <p><strong>Suggested Students:</strong></p>
+            <div>
+              <span class="student-tag">Nia Chebet (Family Law)</span>
+              <span class="student-tag">Peter Ndirangu (Human Rights)</span>
+            </div>
+            <div class="action-buttons mt-3">
+              <button class="btn btn-primary btn-sm">Assign Student</button>
+              <button class="btn btn-info btn-sm">Collaborate</button>
+              <a href="case-detail.html?case=child-custody" class="btn btn-secondary btn-sm">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>© Copyright 2025 Access to Justice. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

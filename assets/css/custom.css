@@ -1,0 +1,70 @@
+.btn-primary, .btn-success, .btn-info {
+    font-weight: bold;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+  }
+  
+  .gradient-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    z-index: -1;
+  }
+  .pic {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* === Responsive Layout Fixes === */
+
+/* Buttons */
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Center alignment for small screens */
+@media (max-width: 768px) {
+  .container.text-center {
+      text-align: center !important;
+  }
+
+  .btn-lg {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .main-banner .caption h2 {
+      font-size: 2rem;
+  }
+
+  .main-banner .caption p {
+      font-size: 1rem;
+  }
+}
+
+/* Adjust form fields on small devices */
+@media (max-width: 576px) {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+  }
+
+  .form-control {
+      height: auto;
+  }
+}
+
+  
